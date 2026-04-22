@@ -491,8 +491,8 @@
             </h2>
             <p class="mb-6 text-gray-600">Explore Omani Khanjar in 3D - Drag to rotate, Scroll to zoom</p>
 
-            <div id="webgl-container" class="relative h-[500px] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-xl overflow-hidden shadow-2xl preserve-3d" style="perspective: 1200px;">
-                <canvas id="threeCanvas" class="w-full h-full"></canvas>
+            <div id="webgl-container" class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-xl overflow-hidden shadow-2xl" style="height: 400px; min-height: 400px;">
+                <canvas id="threeCanvas" class="w-full h-full" width="800" height="400"></canvas>
                 
                 <div class="absolute top-4 left-4 bg-black/70 text-white px-4 py-2 rounded-full backdrop-blur-sm">
                     <i class="fas fa-cube mr-2"></i>Khanjar 3D Model
@@ -969,11 +969,17 @@
         }
         
         // Start animation
-        if (canvas) {
-            canvas.width = container.offsetWidth;
-            canvas.height = container.offsetHeight;
-            animate3D();
+        function init3D() {
+            if (canvas && container) {
+                canvas.width = container.offsetWidth || 800;
+                canvas.height = container.offsetHeight || 400;
+                animate3D();
+            }
         }
+        
+        window.addEventListener('load', init3D);
+        window.addEventListener('resize', init3D);
+        init3D();
     </script>
     <script>
         // Image Editor
