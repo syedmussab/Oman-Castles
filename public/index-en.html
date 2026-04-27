@@ -234,6 +234,95 @@
             </div>
         </section>
 
+        <!-- Responsive Images Section -->
+        <section id="responsive-images" class="mb-12">
+            <h2 class="text-3xl font-bold text-oman-blue mb-6">📱 Responsive Images Demo</h2>
+            <p class="mb-6 text-gray-600">Art Direction - Different images for different screen sizes</p>
+            
+            <!-- Desktop/Tablet/Mobile using picture element -->
+            <div class="bg-white rounded-xl p-6 shadow-lg mb-8">
+                <h3 class="text-xl font-bold text-oman-dark mb-4">🖥️ Desktop Image (min-width: 1024px)</h3>
+                <picture>
+                    <source srcset="https://picsum.photos/1200/600?random=1" media="(min-width: 1024px)" type="image/jpeg">
+                    <source srcset="https://picsum.photos/800/400?random=1" media="(min-width: 768px)" type="image/jpeg">
+                    <img src="https://picsum.photos/400/200?random=1" alt="Responsive Castle - Desktop" class="w-full h-auto rounded-lg">
+                </picture>
+                <p class="text-sm text-gray-500 mt-2">Resize browser to see different images</p>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 shadow-lg mb-8">
+                <h3 class="text-xl font-bold text-oman-dark mb-4">📱 Mobile vs Tablet vs Desktop - Same Image Different Sizes</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="text-center">
+                        <picture>
+                            <source srcset="https://picsum.photos/400/400?random=10" media="(min-width: 1024px)" type="image/jpeg">
+                            <source srcset="https://picsum.photos/300/300?random=10" media="(min-width: 768px)" type="image/jpeg">
+                            <img src="https://picsum.photos/200/200?random=10" alt="Mobile View" class="w-full h-48 md:h-64 object-cover rounded-lg">
+                        </picture>
+                        <p class="mt-2 font-bold text-sm">Smartphone</p>
+                        <p class="text-xs text-gray-500">200x200</p>
+                    </div>
+                    <div class="text-center">
+                        <picture>
+                            <source srcset="https://picsum.photos/400/400?random=11" media="(min-width: 1024px)" type="image/jpeg">
+                            <source srcset="https://picsum.photos/300/300?random=11" media="(min-width: 768px)" type="image/jpeg">
+                            <img src="https://picsum.photos/200/200?random=11" alt="Tablet View" class="w-full h-48 md:h-64 object-cover rounded-lg">
+                        </picture>
+                        <p class="mt-2 font-bold text-sm">Tablet</p>
+                        <p class="text-xs text-gray-500">300x300</p>
+                    </div>
+                    <div class="text-center">
+                        <picture>
+                            <source srcset="https://picsum.photos/400/400?random=12" media="(min-width: 1024px)" type="image/jpeg">
+                            <source srcset="https://picsum.photos/300/300?random=12" media="(min-width: 768px)" type="image/jpeg">
+                            <img src="https://picsum.photos/200/200?random=12" alt="Desktop View" class="w-full h-48 md:h-64 object-cover rounded-lg">
+                        </picture>
+                        <p class="mt-2 font-bold text-sm">Desktop</p>
+                        <p class="text-xs text-gray-500">400x400</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pixel Density (Retina) Demo -->
+            <div class="bg-white rounded-xl p-6 shadow-lg">
+                <h3 class="text-xl font-bold text-oman-dark mb-4">👁️ Pixel Density Demo (Retina/High DPI)</h3>
+                <p class="mb-4 text-gray-600">srcset for different pixel densities</p>
+                <div class="flex flex-wrap gap-8 justify-center items-center">
+                    <div class="text-center">
+                        <img src="https://picsum.photos/100/100?random=20" 
+                             srcset="https://picsum.photos/100/100?random=20 1x,
+                                     https://picsum.photos/200/200?random=20 2x,
+                                     https://picsum.photos/300/300?random=20 3x"
+                             alt="Pixel Density Demo" 
+                             class="w-24 h-24 mx-auto rounded-lg shadow-md">
+                        <p class="mt-2 text-sm font-bold">Standard (1x)</p>
+                        <p class="text-xs text-gray-500">100px</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://picsum.photos/100/100?random=21" 
+                             srcset="https://picsum.photos/100/100?random=21 1x,
+                                     https://picsum.photos/200/200?random=21 2x,
+                                     https://picsum.photos/300/300?random=21 3x"
+                             alt="Pixel Density Demo" 
+                             class="w-24 h-24 mx-auto rounded-lg shadow-md">
+                        <p class="mt-2 text-sm font-bold">Retina (2x)</p>
+                        <p class="text-xs text-gray-500">200px</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://picsum.photos/100/100?random=22" 
+                             srcset="https://picsum.photos/100/100?random=22 1x,
+                                     https://picsum.photos/200/200?random=22 2x,
+                                     https://picsum.photos/300/300?random=22 3x"
+                             alt="Pixel Density Demo" 
+                             class="w-24 h-24 mx-auto rounded-lg shadow-md">
+                        <p class="mt-2 text-sm font-bold">Super Retina (3x)</p>
+                        <p class="text-xs text-gray-500">300px</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-500 mt-4 text-center">Browser zoom to see quality difference on high DPI displays</p>
+            </div>
+        </section>
+
         <!-- Image Editor -->
         <section id="image-editor" class="mb-12">
             <h2 class="text-3xl font-bold text-oman-blue mb-6">🎨 Image Editor</h2>
